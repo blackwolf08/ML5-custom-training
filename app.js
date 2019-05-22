@@ -82,4 +82,4 @@ function toggleOverlay(s){
     }
 }
 
-window.addEventListener('load', ()=> overlay.style.display = 'none')
+window.addEventListener('load', ()=> overlay.classList.add('hide'))
