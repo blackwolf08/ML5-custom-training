@@ -33,28 +33,29 @@ function draw() {
 }
 
 obj1Button = document.getElementById("obj1b");
-obj1Button = document.getElementById("obj2b");
-obj2Button = document.getElementById("obj3b");
-obj3Button = document.getElementById("trainb");
+obj2Button = document.getElementById("obj2b");
+obj3Button = document.getElementById("obj3b");
+trainb = document.getElementById("trainb");
 
 let obj1i = document.getElementById("obj1i");
 let obj2i = document.getElementById("obj2i");
 let obj3i = document.getElementById("obj3i");
 
 
-obj1Button.addEventListener("click", () => {
+obj1Button.addEventListener('mousedown', () => {
+    console.log('hnjj1')
   classifier.addImage(obj1i.value);
 });
 
-obj2Button.addEventListener("click", () => {
+obj2Button.addEventListener("mousedown" || 'click', () => {
   classifier.addImage(obj2i.value);
 });
 
-obj3Button.addEventListener("click", () => {
+obj3Button.addEventListener("mousedown" || 'click', () => {
   classifier.addImage(obj3i.value);
 });
 
-obj3Button.addEventListener("click", () => {
+trainb.addEventListener("click", () => {
   console.log("hi");
   toggleOverlay(0);
 
