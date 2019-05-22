@@ -41,24 +41,20 @@ let obj1i = document.getElementById("obj1i");
 let obj2i = document.getElementById("obj2i");
 let obj3i = document.getElementById("obj3i");
 
-
-obj1Button.addEventListener('mousedown', () => {
-    console.log('hnjj1')
+obj1Button.addEventListener("click", () => {
   classifier.addImage(obj1i.value);
 });
 
-obj2Button.addEventListener("mousedown" || 'click', () => {
+obj2Button.addEventListener("click", () => {
   classifier.addImage(obj2i.value);
 });
 
-obj3Button.addEventListener("mousedown" || 'click', () => {
+obj3Button.addEventListener("click", () => {
   classifier.addImage(obj3i.value);
 });
 
 trainb.addEventListener("click", () => {
-  console.log("hi");
   toggleOverlay(0);
-
   classifier.train(loss => {
     if (loss == null) {
       toggleOverlay(1);
@@ -72,15 +68,14 @@ function gotResults(err, res) {
   classifier.classify(gotResults);
 }
 
-function toggleOverlay(s){
-    if(s == 0)
-    {
-        overlay.classList.add('show');
-        overlay.classList.remove('hide');
-    }else {
-        overlay.classList.remove('show');
-        overlay.classList.add('hide');
-    }
+function toggleOverlay(s) {
+  if (s == 0) {
+    overlay.classList.add("show");
+    overlay.classList.remove("hide");
+  } else {
+    overlay.classList.remove("show");
+    overlay.classList.add("hide");
+  }
 }
 
-window.addEventListener('load', ()=> overlay.classList.add('hide'))
+window.addEventListener("load", () => overlay.classList.add("hide"));
