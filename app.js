@@ -11,6 +11,7 @@ let testButton;
 function setup() {
     createCanvas(320, 270);
     video = createCapture(VIDEO);
+    video.elt.setAttribute('playsinline', '');
     video.hide();
     background(0);
 
